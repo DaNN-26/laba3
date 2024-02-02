@@ -1,11 +1,18 @@
 import java.util.Arrays;
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        int[] array = new int[] {2, 5, 3, 1, 7, 10, 9, 4, 8, 6};
+        Scanner input = new Scanner(System.in);
+        int[] array = new int[10];
+        for(int i = 0; i < array.length; i++)
+        {
+            System.out.printf("Введите %d число массива:", i + 1);
+            array[i] = input.nextInt();
+        }
         System.out.println("Исходный массив");
         System.out.println(Arrays.toString(array));
         int low = 0;
-        int high = 4;
+        int high = 3;
         quickSort(array, low, high);
         System.out.println("Отсортированный массив");
         System.out.println(Arrays.toString(array));
